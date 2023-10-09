@@ -52,8 +52,25 @@ module.exports = function(config) {
                     'Authorization': 'Bearer '+config.quivr_api_key
                 }
         });
+        await removeChat(chat.chat_id);
         return res.data;
     }
+
+    /**
+     * Removes a chat by its ID.
+     *
+     * @param {string} chatId - The ID of the chat to be removed.
+     * @return {Promise} - A promise that resolves to the data returned by the server.
+     */
+    const removeChat = async function(chatId){
+        const res = await axios.delete(config.quivr_url + '/chat/'+chatId,{
+            headers:{
+                'Authorization': 'Bearer '+config.quivr_api_key
+            }
+        });
+        return res.data;
+    }
+
     /**
          * Retrieves the brains from the quivr_url endpoint.
          *
@@ -102,6 +119,7 @@ module.exports = function(config) {
         createChat: createChat,
         createBrain: createBrain,
         crawl: crawl,
+        removeChat:removeChat,
         dumpConfig: function(){
             return config;
         }
