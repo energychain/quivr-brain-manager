@@ -1,0 +1,25 @@
+{
+  "name": "quivr-brain-manager",
+  "version": "1.0.0",
+  "description": "Node Module to work with knowledge/brains in Quivr.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/energychain/quivr-brain-manager.git"
+  },
+  "keywords": [
+    "quivr"
+  ],
+  "author": "STROMDAO GmbH <dev@stromdao.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/energychain/quivr-brain-manager/issues"
+  },
+  "homepage": "https://github.com/energychain/quivr-brain-manager#readme",
+  "dependencies": {
+    "axios": "^1.5.1"
+  }
+}
