@@ -108,7 +108,7 @@ module.exports = function(config) {
      * @return {Promise<object>} The chat history data.
      */
     const chatHistory = async function(chat_id) {
-        const res = await axios.get(config.quivr_url + '/chat/'+chat_id+'/history'{
+        const res = await axios.get(config.quivr_url + '/chat/'+chat_id+'/history',{
             headers:{
                 'Authorization': 'Bearer '+config.quivr_api_key
             }
