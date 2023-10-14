@@ -118,7 +118,7 @@ module.exports = function(config) {
     const askQuestion = async function(brain_id,chat_id,question,tenperature,max_tokens,model) {
         if((typeof tenperature == 'undefined') || (tenperature == null)) tenperature = 0;
         if((typeof max_tokens == 'undefined') || (max_tokens == null)) max_tokens = 750;
-        if((typeof model == 'undefined') || (model == null)) model = 750;
+        if((typeof model == 'undefined') || (model == null)) model = 'huggingface/mistralai/Mistral-7B-Instruct-v0.1';
 
         const res = await axios.post(
             config.quivr_url+"/chat/"+chat_id+"/question?brain_id="+brain_id,{

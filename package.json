@@ -1,6 +1,6 @@
 {
   "name": "quivr-brain-manager",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Node Module to work with knowledge/brains in Quivr.",
   "main": "index.js",
   "scripts": {
